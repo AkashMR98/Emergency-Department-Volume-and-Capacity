@@ -5,6 +5,8 @@
 Healthcare systems often struggle with managing Emergency Department (ED) demand due to increasing patient volume and limited resources.
 This project analyzes patient volume, hospital capacity, and resource utilization to identify inefficiencies and improve decision-making.
 
+--------------------------------------------------------------------------
+
 ## 🚨 Business Problem
 
 Hospitals need to answer critical operational questions:
@@ -21,6 +23,8 @@ Without proper analysis, this leads to:
 - Delayed treatments
 - Poor resource allocation
 
+--------------------------------------------------------------------------
+
 ## 🎯 Objectives
 
 - Analyze patient volume across hospitals
@@ -30,6 +34,8 @@ Without proper analysis, this leads to:
 - Identify shortages in primary care & mental health
 - Study trends over time (2021–2023)
 - Provide data-driven insights for optimization
+
+--------------------------------------------------------------------------
 
 ## 📊 Dataset Information
 
@@ -46,6 +52,8 @@ Without proper analysis, this leads to:
 - Number of Records (Rows): 12,000+
 
 - Number of Attributes (Columns): 18
+
+--------------------------------------------------------------------------
 
 ## 🧾 Data Dictionary (Renamed Attributes)
 
@@ -72,6 +80,8 @@ Without proper analysis, this leads to:
 
 Note: Column names were renamed for better readability and analysis.
 
+--------------------------------------------------------------------------
+
 ## 🛠️ Tools & Technologies
 
 - Python
@@ -81,6 +91,8 @@ Note: Column names were renamed for better readability and analysis.
 - Matplotlib
 - Seaborn
 
+--------------------------------------------------------------------------
+
 ## ⚙️ Data Preprocessing
 
 - Missing value analysis
@@ -88,7 +100,11 @@ Note: Column names were renamed for better readability and analysis.
 - Removal of unnecessary columns
 - Feature engineering
 
-## 📈 Statistical Analysis
+--------------------------------------------------------------------------
+
+## 📊 Exploratory Data Analysis
+
+### 📈 Statistical Analysis
 
 #### Measures:
 
@@ -100,7 +116,9 @@ Note: Column names were renamed for better readability and analysis.
 - Skewness
 - Kurtosis
 
-## 📉 Data Visualizations
+--------------------------------------------------------------------------
+
+### 📉 Data Visualizations
 
 ### Univariate Analysis
 
@@ -118,6 +136,67 @@ Note: Column names were renamed for better readability and analysis.
 
 - Correlation Heatmap
 - Scatter (with hue)
+### Chart Type:
+Scatter Plot
+
+--------------------------------------------------------------------------
+
+### Columns Used:
+Total Visits, Visits per Station, Area Type
+
+### Relationship:
+Total Visits ↔ Visits per Station (with Area Type classification)
+
+### Insights:
+- Urban areas show higher total visits and better station utilization.
+- Rural areas fall in the medium range of visits and usage.
+- Frontier areas have the lowest visits and utilization levels.
+- A slight positive relationship exists between total visits and visits per station.
+- This indicates that as hospital visits increase, station usage also increases moderately.
+
+ <img width="580" height="437" alt="scatter totalvisitarea" src="https://github.com/user-attachments/assets/d5244fd5-0aee-46b5-b168-546ee616a7d6" />
+ 
+--------------------------------------------------------------------------
+
+### Chart Type:
+Heatmap
+
+### Columns Used:
+Total Visits, ED Stations, Condition Visits, Visits per Station
+
+### Relationship:
+Correlation between multiple numerical variables
+
+### Insights:
+- Total Visits and ED Stations have a strong positive correlation (~0.83).
+- Condition Visits and Visits per Station also show strong correlation (~0.80).
+- ED Stations and Visits per Station have very low correlation.
+- This shows that increasing stations does not always improve efficiency.
+- Key hospital metrics are interrelated but not equally impactful.
+
+  <img width="620" height="537" alt="heatmap chart" src="https://github.com/user-attachments/assets/03c92c0d-ad61-4e5a-aa13-896aec7ba23e" />
+
+--------------------------------------------------------------------------
+
+### Chart Type:
+Bar Chart
+
+### Columns Used:
+Area Type, Total Visits
+
+### Relationship:
+Area Type ↔ Total Hospital Visits
+
+### Insights:
+- Urban areas record the highest number of hospital visits.
+- Rural areas show moderate patient volume.
+- Frontier areas have the lowest hospital visits.
+- This indicates a clear demand gap based on location.
+- Healthcare demand is concentrated more in urban regions.
+
+<img width="588" height="435" alt="barplot chart" src="https://github.com/user-attachments/assets/893630ef-2e03-4507-8873-5fde283cca21" />
+
+--------------------------------------------------------------------------
 
 ## 🔍 Key Findings
 
@@ -129,12 +208,16 @@ Note: Column names were renamed for better readability and analysis.
 - Few hospitals handle very high volume, most are moderate/low.
 - Certain counties show higher healthcare demand.
 
+--------------------------------------------------------------------------
+
 ## 📌 Types of Analysis
 
 - Descriptive Analysis
 - Diagnostic Analysis
 - Predictive Analysis
 - Prescriptive Analysis
+
+--------------------------------------------------------------------------
 
 ## 🚀 Future Enhancements
 
@@ -145,6 +228,8 @@ Note: Column names were renamed for better readability and analysis.
 - Improve bed & staff allocation
 - Detect unusual spikes in visits
 - Combine multiple hospital data sources
+
+--------------------------------------------------------------------------
 
 ## ⭐ Conclusion
 This project highlights the gap between patient demand and hospital capacity, identifying overcrowding and resource shortages. The insights help improve resource allocation, efficiency, and patient care through data-driven decisions.
